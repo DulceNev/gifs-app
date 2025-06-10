@@ -1,18 +1,17 @@
 <div id="nav" class="w-full px-2 flex flex-col gap-3">
-    <!--  -->
-
     @for (item of menuOptions; track item.route) {
-    <a [routerLink]="item.route" routerLinkActive="bg-[#7f99c9] border-[#5672a5] text-white"
-        class="rounded-2xl w-full px-2 inline-flex border-1 space-x-2 items-center py-3 hover:bg-[#7f99c9] hover:border-[#5672a5] text-[#5672a5] hover:text-white transition ease-linear duration-150">
+    <a [routerLink]="item.route" routerLinkActive #rla="routerLinkActive" [ngClass]="{
+                'bg-[#7f99c9] text-white': rla.isActive,
+                'bg-white/40 text-[#5672a5]': !rla.isActive
+            }"
+        class="rounded-2xl w-full px-2 inline-flex space-x-2 items-center py-2  transition ease-linear duration-150">
         <div>
-            <i [class]="item.icon"></i>
+            <i class="px-1" [class]="item.icon"></i>
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-bold">{{item.label}}</span>
-            <span class="text-xs  hidden md:block">{{item.subLabel}}</span>
+            <span class="text-sm font-medium">{{item.label}}</span>
+            <span class="text-xs hidden md:block font-light">{{item.subLabel}}</span>
         </div>
     </a>
     }
-
-
 </div>
