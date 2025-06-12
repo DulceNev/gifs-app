@@ -1,4 +1,4 @@
-# 🎞️ Giffy App - Buscador de GIFs con Angular
+# Buscador de GIFs con Angular
 
 ¡**Giffy App**! 🌸  
 Una aplicación web hecha con **Angular** y **Tailwind CSS** que te permite buscar GIFs divertidos, explorar los más populares y guardar tu historial de búsqueda de forma dinámica y ordenada 💫
