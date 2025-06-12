@@ -1,9 +1,9 @@
-<section class="p-5 h-screen bg-transparent text-white">
+<section class="py-5 h-screen bg-transparent text-white">
     <h2 class="text-2xl font-bold ">Explora y encuentra tus gifs favoritos</h2>
     <p class="mb-5">Descubre gifs adorables buscando por nombre, descripción o palabras clave</p>
 
-    <input class="w-full bg-white/30 rounded-full px-3 py-2 text-white border-1 border-white" type="text" name="" id=""
-        placeholder="Buscar..." (keyup.enter)="onSearch(txtSearch.value)" #txtSearch>
+    <input class="w-full mb-6 bg-white/30 rounded-full px-3 py-2 text-white border-1 border-white" type="text" name=""
+        id="" placeholder="Buscar..." (keyup.enter)="onSearch(txtSearch.value)" #txtSearch>
 
     <section class="" #card>
         <gif-list [gifs]="gifs()" />

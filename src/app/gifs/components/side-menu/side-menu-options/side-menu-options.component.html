@@ -14,4 +14,19 @@
         </div>
     </a>
     }
+
+    @for (key of gifService.searchHistoryKeys(); track key) {
+    <a [routerLink]="['/dashboard/history', key]" routerLinkActive #rla="routerLinkActive" [ngClass]="{
+                    'bg-[#7f99c9] text-white': rla.isActive,
+                    'bg-white/40 text-[#5672a5]': !rla.isActive
+                }"
+        class="rounded-2xl w-full px-2 inline-flex space-x-2 items-center py-2  transition ease-linear duration-150">
+        <div>
+            <i class="px-1" class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-sm font-medium">{{key}}</span>
+        </div>
+    </a>
+    }
 </div>
